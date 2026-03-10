@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro | NutriAcesso</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">🥗 NutriAcesso</a>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="profissionais.html">Encontrar Nutricionista</a>
+        <a href="cadastro.html" class="active">Sou Nutricionista</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cadastro-page">
+    <div class="container">
+      <h1 class="page-title">Cadastro de Nutricionista</h1>
+      <p class="page-subtitle">Preencha o formulário abaixo. Seu perfil será publicado após análise da nossa equipe.</p>
+
+      <form id="form-cadastro" class="form-card">
+        <fieldset>
+          <legend>Dados Profissionais</legend>
+          <div class="form-group">
+            <label for="nome">Nome completo *</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+          <div class="form-group">
+            <label for="crn">CRN *</label>
+            <input type="text" id="crn" name="crn" placeholder="Ex: CRN-3 12345" required />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="estado">Estado *</label>
+              <select id="estado" name="estado" required>
+                <option value="">Selecione</option>
+                <option value="SP">São Paulo</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="PR">Paraná</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="PE">Pernambuco</option>
+                <option value="GO">Goiás</option>
+                <option value="DF">Distrito Federal</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cidade">Cidade *</label>
+              <input type="text" id="cidade" name="cidade" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="especialidades">Especialidades * <small>(separe por vírgula)</small></label>
+            <input type="text" id="especialidades" name="especialidades" placeholder="Ex: emagrecimento, hipertrofia, nutrição infantil" required />
+          </div>
+          <div class="form-group">
+            <label for="modalidade">Modalidade de atendimento *</label>
+            <select id="modalidade" name="modalidade" required>
+              <option value="">Selecione</option>
+              <option value="online">Online</option>
+              <option value="presencial">Presencial</option>
+              <option value="ambos">Presencial e Online</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="valor_social">Valor da consulta social</label>
+            <input type="text" id="valor_social" name="valor_social" placeholder="Ex: R$ 50,00 ou A combinar" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Contato</legend>
+          <div class="form-group">
+            <label for="contato_whatsapp">WhatsApp *</label>
+            <input type="tel" id="contato_whatsapp" name="contato_whatsapp" placeholder="(11) 91234-5678" required />
+          </div>
+          <div class="form-group">
+            <label for="contato_email">E-mail *</label>
+            <input type="email" id="contato_email" name="contato_email" required />
+          </div>
+          <div class="form-group">
+            <label for="contato_instagram">Instagram <small>(opcional)</small></label>
+            <input type="text" id="contato_instagram" name="contato_instagram" placeholder="@seu.perfil" />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sobre você</legend>
+          <div class="form-group">
+            <label for="descricao">Apresentação <small>(opcional)</small></label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="Conte um pouco sobre sua abordagem e como você pode ajudar..."></textarea>
+          </div>
+        </fieldset>
+
+        <div id="form-msg" class="form-msg" style="display:none"></div>
+        <button type="submit" class="btn btn--primary btn--full">Enviar cadastro</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 NutriAcesso · Feito com 💚 para democratizar a nutrição</p>
+    </div>
+  </footer>
+
+  <script src="js/cadastro.js"></script>
+</body>
+</html>

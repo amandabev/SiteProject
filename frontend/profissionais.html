@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profissionais | NutriAcesso</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">🥗 NutriAcesso</a>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="profissionais.html" class="active">Encontrar Nutricionista</a>
+        <a href="cadastro.html">Sou Nutricionista</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="directory-page">
+    <div class="container">
+      <h1 class="page-title">Encontre um nutricionista</h1>
+
+      <!-- FILTROS -->
+      <div class="filters">
+        <select id="filtro-estado">
+          <option value="">Todos os estados</option>
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+          <option value="RS">Rio Grande do Sul</option>
+          <option value="PR">Paraná</option>
+          <option value="BA">Bahia</option>
+          <option value="CE">Ceará</option>
+          <option value="PE">Pernambuco</option>
+          <option value="GO">Goiás</option>
+          <option value="DF">Distrito Federal</option>
+        </select>
+        <select id="filtro-modalidade">
+          <option value="">Presencial ou Online</option>
+          <option value="online">Online</option>
+          <option value="presencial">Presencial</option>
+          <option value="ambos">Ambos</option>
+        </select>
+        <input type="text" id="filtro-especialidade" placeholder="Especialidade (ex: emagrecimento)" />
+        <button class="btn btn--primary" onclick="buscar()">Buscar</button>
+      </div>
+
+      <!-- RESULTADOS -->
+      <div id="resultado" class="cards-grid"></div>
+      <p id="sem-resultado" class="sem-resultado" style="display:none">Nenhum profissional encontrado com esses filtros.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 NutriAcesso · Feito com 💚 para democratizar a nutrição</p>
+    </div>
+  </footer>
+
+  <script src="js/profissionais.js"></script>
+</body>
+</html>

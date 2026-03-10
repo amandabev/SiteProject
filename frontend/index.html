@@ -3,37 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NutriAcesso</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>NutriAcesso - Atendimento Nutricional a Preco Social</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container header__inner">
-      <a href="index.html" class="logo">🥗 NutriAcesso</a>
-      <nav class="nav">
-        <a href="index.html">Início</a>
-        <a href="profissionais.html">Encontrar Nutricionista</a>
-        <a href="cadastro.html">Sou Nutricionista</a>
-        <a href="sobre.html">Sobre</a>
-      </nav>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">NutriAcesso</a>
+      <ul class="nav-links">
+        <li><a href="pages/directory.html">Encontrar Nutricionista</a></li>
+        <li><a href="pages/about.html">Sobre</a></li>
+        <li><a href="pages/register.html" class="btn btn-primary">Sou Nutricionista</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
     </div>
-  </header>
+  </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero__inner">
-      <div class="hero__text">
-        <h1>Nutrição acessível para todos</h1>
-        <p>Conectamos você a nutricionistas que oferecem atendimento a <strong>preço social</strong>. Sem complicação, só contato direto.</p>
-        <div class="hero__actions">
-          <a href="profissionais.html" class="btn btn--primary">Encontrar Nutricionista</a>
-          <a href="cadastro.html" class="btn btn--secondary">Quero me cadastrar</a>
-        </div>
-      </div>
-      <div class="hero__image">
-        <img src="assets/hero-illustration.svg" alt="Ilustração nutricionista" />
+    <div class="container hero-content">
+      <h1>Nutrição acessível para quem precisa</h1>
+      <p>Conectamos você a nutricionistas voluntários que oferecem atendimento a preço social. Simples, rápido e gratuito para buscar.</p>
+      <div class="hero-buttons">
+        <a href="pages/directory.html" class="btn btn-primary btn-lg">Encontrar Nutricionista</a>
+        <a href="pages/register.html" class="btn btn-outline btn-lg">Sou Nutricionista</a>
       </div>
     </div>
   </section>
@@ -44,39 +40,40 @@
       <h2 class="section-title">Como funciona</h2>
       <div class="steps">
         <div class="step">
-          <div class="step__icon">🔍</div>
-          <h3>Busque</h3>
-          <p>Filtre por estado, especialidade ou modalidade de atendimento.</p>
+          <div class="step-icon">&#128269;</div>
+          <h3>1. Busque</h3>
+          <p>Filtre por estado, especialidade ou modalidade e encontre o profissional ideal.</p>
         </div>
         <div class="step">
-          <div class="step__icon">👩‍⚕️</div>
-          <h3>Escolha</h3>
-          <p>Veja o perfil do profissional e suas informações de contato.</p>
+          <div class="step-icon">&#128100;</div>
+          <h3>2. Conheça</h3>
+          <p>Acesse o perfil completo do nutricionista com sua especialidade e contatos.</p>
         </div>
         <div class="step">
-          <div class="step__icon">💬</div>
-          <h3>Entre em contato</h3>
-          <p>Fale diretamente com o nutricionista pelo WhatsApp ou e-mail.</p>
+          <div class="step-icon">&#128222;</div>
+          <h3>3. Entre em contato</h3>
+          <p>Fale diretamente pelo WhatsApp ou e-mail. Sem intermediários.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA NUTRICIONISTA -->
-  <section class="cta-nutri">
-    <div class="container cta-nutri__inner">
+  <section class="cta-section">
+    <div class="container">
       <h2>Você é nutricionista?</h2>
-      <p>Cadastre-se gratuitamente e ajude mais pessoas a terem acesso à nutrição de qualidade.</p>
-      <a href="cadastro.html" class="btn btn--primary">Fazer meu cadastro</a>
+      <p>Cadastre-se e ajude pessoas que precisam de orientação nutricional com preço acessível.</p>
+      <a href="pages/register.html" class="btn btn-white btn-lg">Fazer cadastro gratuito</a>
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>© 2025 NutriAcesso · Feito com 💚 para democratizar a nutrição</p>
+      <p>&copy; 2024 NutriAcesso. Todos os direitos reservados.</p>
     </div>
   </footer>
 
+  <script src="js/main.js"></script>
 </body>
 </html>

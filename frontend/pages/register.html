@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Nutricionista - NutriAcesso</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/register.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="logo">NutriAcesso</a>
+      <ul class="nav-links">
+        <li><a href="directory.html">Encontrar Nutricionista</a></li>
+        <li><a href="about.html">Sobre</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="register-page">
+    <div class="container">
+      <div class="form-card">
+        <h1>Cadastro de Nutricionista</h1>
+        <p class="form-subtitle">Preencha os dados abaixo. Seu perfil será revisado antes de ser publicado.</p>
+
+        <div id="successMsg" class="alert alert-success" style="display:none">
+          ✅ Cadastro enviado com sucesso! Aguarde a aprovação da equipe.
+        </div>
+        <div id="errorMsg" class="alert alert-error" style="display:none"></div>
+
+        <form id="registerForm" novalidate>
+
+          <fieldset>
+            <legend>Dados Pessoais e Profissionais</legend>
+            <div class="form-group">
+              <label for="name">Nome completo *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="crn">CRN *</label>
+                <input type="text" id="crn" name="crn" placeholder="Ex: CRN-3 12345" required />
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Contato</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="text" id="whatsapp" name="whatsapp" placeholder="Ex: 11999990000" />
+              </div>
+              <div class="form-group">
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram" placeholder="@seuuser" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Localização e Atendimento</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="state">Estado *</label>
+                <select id="state" name="state" required>
+                  <option value="">Selecione</option>
+                  <option value="AC">Acre</option><option value="AL">Alagoas</option>
+                  <option value="AM">Amazonas</option><option value="BA">Bahia</option>
+                  <option value="CE">Ceará</option><option value="DF">Distrito Federal</option>
+                  <option value="ES">Espírito Santo</option><option value="GO">Goiás</option>
+                  <option value="MA">Maranhão</option><option value="MG">Minas Gerais</option>
+                  <option value="MS">Mato Grosso do Sul</option><option value="MT">Mato Grosso</option>
+                  <option value="PA">Pará</option><option value="PB">Paraíba</option>
+                  <option value="PE">Pernambuco</option><option value="PI">Piauí</option>
+                  <option value="PR">Paraná</option><option value="RJ">Rio de Janeiro</option>
+                  <option value="RN">Rio Grande do Norte</option><option value="RO">Rondônia</option>
+                  <option value="RR">Roraima</option><option value="RS">Rio Grande do Sul</option>
+                  <option value="SC">Santa Catarina</option><option value="SE">Sergipe</option>
+                  <option value="SP">São Paulo</option><option value="TO">Tocantins</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="city">Cidade *</label>
+                <input type="text" id="city" name="city" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="modality">Modalidade de atendimento *</label>
+              <select id="modality" name="modality" required>
+                <option value="">Selecione</option>
+                <option value="online">Online</option>
+                <option value="presencial">Presencial</option>
+                <option value="ambos">Ambos</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Especialidades e Valor</legend>
+            <div class="form-group">
+              <label>Especialidades (selecione todas que se aplicam)</label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="specialties" value="Nutrição Clínica" /> Nutrição Clínica</label>
+                <label><input type="checkbox" name="specialties" value="Nutrição Esportiva" /> Nutrição Esportiva</label>
+                <label><input type="checkbox" name="specialties" value="Nutrição Infantil" /> Nutrição Infantil</label>
+                <label><input type="checkbox" name="specialties" value="Emagrecimento" /> Emagrecimento</label>
+                <label><input type="checkbox" name="specialties" value="Gestantes" /> Gestantes</label>
+                <label><input type="checkbox" name="specialties" value="Veganos e Vegetarianos" /> Veganos/Vegetarianos</label>
+                <label><input type="checkbox" name="specialties" value="Diabetes" /> Diabetes</label>
+                <label><input type="checkbox" name="specialties" value="Hipertrofia" /> Hipertrofia</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="social_price">Valor da consulta social</label>
+              <input type="text" id="social_price" name="social_price" placeholder="Ex: R$ 30,00 ou A combinar" />
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Apresentação</legend>
+            <div class="form-group">
+              <label for="bio">Sobre você</label>
+              <textarea id="bio" name="bio" rows="4" placeholder="Conte um pouco sobre sua experiência e como atende..."></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">
+            Enviar cadastro
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 NutriAcesso. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>

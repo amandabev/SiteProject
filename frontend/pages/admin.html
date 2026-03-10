@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel Admin - NutriAcesso</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body>
+
+  <!-- LOGIN -->
+  <div id="loginScreen" class="login-screen">
+    <div class="login-card">
+      <h1 class="logo">NutriAcesso</h1>
+      <h2>Painel Administrativo</h2>
+      <div id="loginError" class="alert alert-error" style="display:none"></div>
+      <div class="form-group">
+        <label for="adminUser">Usuário</label>
+        <input type="text" id="adminUser" />
+      </div>
+      <div class="form-group">
+        <label for="adminPass">Senha</label>
+        <input type="password" id="adminPass" />
+      </div>
+      <button class="btn btn-primary btn-block" id="btnLogin">Entrar</button>
+    </div>
+  </div>
+
+  <!-- PAINEL -->
+  <div id="adminPanel" style="display:none">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <span class="logo">NutriAcesso Admin</span>
+        <button class="btn btn-outline" id="btnLogout">Sair</button>
+      </div>
+    </nav>
+
+    <main class="container admin-main">
+      <div class="admin-tabs">
+        <button class="tab-btn active" data-tab="pending">Pendentes <span id="pendingCount" class="badge">0</span></button>
+        <button class="tab-btn" data-tab="all">Todos os cadastros</button>
+      </div>
+
+      <div id="tabPending" class="tab-content">
+        <h2>Cadastros pendentes de aprovação</h2>
+        <div id="pendingList"></div>
+      </div>
+
+      <div id="tabAll" class="tab-content" style="display:none">
+        <h2>Todos os nutricionistas</h2>
+        <div id="allList"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/api.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* =============================================
+   HOME PAGE
+   ============================================= */
+
+.hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: var(--color-white);
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  max-width: 580px;
+  margin: 0 auto 2rem;
+  opacity: 0.92;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* HOW IT WORKS */
+.how-it-works {
+  padding: 5rem 0;
+  background: var(--color-white);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--color-text);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.step {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  transition: box-shadow var(--transition);
+}
+.step:hover { box-shadow: var(--shadow-hover); }
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.step p { font-size: 0.95rem; color: var(--color-text-light); }
+
+/* CTA */
+.cta-section {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.cta-section h2 { font-size: 1.8rem; margin-bottom: 0.75rem; }
+.cta-section p  { font-size: 1.05rem; margin-bottom: 1.75rem; opacity: 0.9; }
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 1.75rem; }
+  .steps { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,65 @@
+/* =============================================
+   ABOUT PAGE
+   ============================================= */
+
+.about-hero {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  color: #fff;
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.about-hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; }
+.about-hero p  { font-size: 1.1rem; opacity: 0.9; }
+
+.about-content { padding: 3rem 0; }
+
+.about-block {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.about-block h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.about-block p {
+  color: var(--color-text-light);
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.col-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+.col-card h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.steps-list {
+  padding-left: 1.25rem;
+  color: var(--color-text-light);
+}
+
+.steps-list li { margin-bottom: 0.5rem; }
+
+@media (max-width: 600px) {
+  .two-col { grid-template-columns: 1fr; }
+}
